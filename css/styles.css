@@ -33,13 +33,16 @@ ul {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 .container {
-  width: 1158px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
   /* outline: 2px solid red; */
 }
 /*! =======HEADER======== */
@@ -227,9 +230,12 @@ header {
   background-color: var(--color-button-ocean);
 }
 /*!============= Features============ */
+
 .features-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .container-icon {
@@ -245,28 +251,40 @@ header {
 
 .features-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
+  /* gap: 24px; */
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 .list-container {
   display: flex;
   gap: 24px;
   padding-bottom: 120px;
 }
 .features-title {
-  font-weight: 500;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  /* font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em; */
   color: var(--primary-text-color-blue);
 }
 .features-text {
-  font-weight: 400;
+  /* font-weight: 400; */
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-text-slate);
   margin-top: 8px;
-  width: 264px;
+  width: 100%;
+  height: auto;
 }
 
 /*!============ Our Team=============== */
@@ -279,12 +297,15 @@ header {
   text-transform: capitalize;
   letter-spacing: 0.02em;
   color: var(--primary-text-color-blue);
-  margin-bottom: 72px;
+  /* margin-bottom: 72px; */
+  margin-bottom: 96px;
 }
 .section-team {
   background-color: var(--color-cloud);
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .team-background {
   background-color: var(--background-color-white);
@@ -303,7 +324,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  /* gap: 24px; */
+  gap: 72px;
   text-align: center;
 }
 .title-name {
@@ -349,20 +371,26 @@ header {
 
 /*!+++++++++++++++ CUSTOMERS++++++++++++++++++ */
 .customers-section {
-  padding-bottom: 120px;
-  padding-top: 120px;
+  /* padding-bottom: 120px;
+  padding-top: 120px; */
+  padding-bottom: 96px;
+  padding-top: 96px;
 }
 
 .customers-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  /* gap: 24px; */
+  gap: 72px 16px;
+ 
 }
 
+
 .customers-item {
-  display: flex;
   justify-content: center;
   align-items: center;
+   width: calc((100% - 16px) / 2);
 }
 .customers-link:is(:hover, :focus) {
   fill: var(--color-button-ocean);
@@ -376,7 +404,8 @@ header {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   height: 88px;
-  width: 168px;
+  /* width: 168px; */
+  max-width: 190px;
   fill: #8e8f99;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -385,8 +414,11 @@ header {
 /*!============= .........Footer....... */
 .footer {
   background-color: var(--primary-text-color-blue);
-  display: flex;
-  padding: 100px 0;
+  /* display: flex; */
+  /* padding: 100px 0; */
+width: 100%;
+  height: auto;
+  padding: 96px 15px;
 }
 .logo-footer {
   color: var(--color-button-iris);
@@ -430,24 +462,24 @@ header {
 .footer-networks {
   display: flex;
   flex-wrap: wrap;
-  width: 208px;
+  max-width: 208px;
   height: 80px;
-  margin-left: 120px;
+  /* margin-left: 120px; */
 }
 div .social-item {
   gap: 16px;
 }
 
 .footer-position {
-  display: flex;
-  justify-content: start;
+  /* display: flex;
+  justify-content: start; */
 }
 
 .link-footer:is(:hover, :focus) {
   background-color: #31d0aa;
 }
-.subscribe-form{
-  display: flex;
+.subscribe-form {
+  /* display: flex; */
   margin-left: 80px;
 }
 .subscribe-title {
@@ -458,18 +490,20 @@ div .social-item {
   letter-spacing: 0.02em;
   color: #ffffff;
   padding-bottom: 16px;
-  margin-left: 80px;
+  /* margin-left: 80px; */
 }
 .subscribe-email {
+ display: block;
   background-color: transparent;
-  width: 264px;
+  /* width: 264px; */
+  max-width: 398px;
   height: 40px;
   padding-left: 16px;
   color: #fff;
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  margin-right: 24px;
+  /* margin-right: 24px; */
 }
 .subscribe-button-text {
   font-weight: 500;
