@@ -176,8 +176,10 @@ header {
 /*! ======main===== =========================*/
 .hero-section {
   display: flex;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  /* padding-top: 188px;
+  padding-bottom: 188px; */
+  padding-top: 112px;
+  padding-bottom: 112px;
   text-align: center;
   background-color: #2e2f42;
 }
@@ -189,22 +191,24 @@ header {
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 1440px;
+  max-width: 320px;
+  /* max-width: 1440px; */
   margin-right: auto;
   margin-left: auto;
 }
 
-.hero {
+.hero{
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color-white);
-  width: 496px;
-  margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
+font-size: 36px;
+line-height: 1.1;
+text-align: center;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+color: #FFFFFF;
+max-width: 320px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 72px;
 }
 
 .button-hero {
@@ -414,14 +418,15 @@ header {
   background-color: var(--primary-text-color-blue);
   /* display: flex; */
   /* padding: 100px 0; */
-  padding: 96px 15px;
+ 
 }
 .footer-logo-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 96px;
 }
 .logo-footer {
   margin-right: auto;
@@ -473,7 +478,7 @@ header {
 }
 .footer-networks {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 208px;
   height: 80px;
   margin-right: auto;
@@ -495,7 +500,7 @@ div .social-item {
   background-color: #31d0aa;
 }
 .subscribe-form {
-  width: 290px;
+  max-width: 398px;
   margin-right: auto;
   margin-left: auto;
  text-align: center;
@@ -503,7 +508,7 @@ div .social-item {
   /* margin-left: 80px; */
 }
 .subscribe-container{
-  
+  padding-bottom: 96px;
 }
 .subscribe-title {
   display: flex;
