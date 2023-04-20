@@ -8,6 +8,16 @@
   }
 }
 @media screen and (min-width: 428px) {
+  .mobile-list {
+    display: flex;
+    align-items: start;
+    gap: 56px;
+  }
+  .container-button-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 396px;
+  }
   .hero-section {
     min-width: 428px;
   }
@@ -29,10 +39,133 @@
     width: 392px;
   }
 }
+
 @media screen and (min-width: 768px) {
-  
+  .container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 16px;
+    width: 736px;
+  }
+  .button-menu {
+    display: none;
+  }
+
+  .page-nav {
+    display: flex;
+    align-items: center;
+  }
+  .menu {
+    margin-left: 120px;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .active:visited {
+    display: block;
+    color: var(--color-button-ocean);
+  }
+  .active-portfolio:visited {
+    display: block;
+    color: var(--color-button-ocean);
+  }
+  .active::after {
+    position: absolute;
+    content: '';
+    width: 48px;
+    height: 4px;
+    background: #404bbf;
+    border-radius: 2px;
+    display: block;
+    margin-top: 33px;
+  }
+  .container-button-menu {
+    width: 115px;
+  }
+  .active-portfolio::after {
+    position: absolute;
+    content: '';
+    width: 48px;
+    height: 4px;
+    background: #404bbf;
+    border-radius: 2px;
+    display: block;
+    margin-top: 20px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .link-header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--primary-text-color-blue, #2e2f42);
+  }
+  .link-header:hover,
+  .link-header:focus {
+    color: var(--color-button-ocean, #404bbf);
+  }
+  .menu:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .address {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .address-phone-mail {
+    display: block;
+  }
+  .address,
+  .address-phone-mail {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-text-slate);
+  }
+  .address:focus,
+  .address:hover {
+    color: var(--color-button-ocean);
+  }
   .hero-section {
     max-width: 768px;
+  }
+  .background {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-tab-1x-min.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 320px;
+    /* max-width: 1440px; */
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .background {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Dark-bg-tab-2x-min.jpg);
+    }
   }
   .hero {
     font-weight: 700;
@@ -166,6 +299,31 @@
 @media screen and (min-width: 1158px) {
   .hero-section {
     max-width: 1158px;
+  }
+  .background {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* min-width: 320px; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 1158px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .background {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office\ 1-deks-2x-min.jpg);
+    }
   }
   .container {
     width: 1158px;

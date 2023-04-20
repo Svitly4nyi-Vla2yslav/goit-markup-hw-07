@@ -49,22 +49,32 @@ img {
 .container-header {
   display: flex;
   align-items: center;
+  width: 320px;
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
+  padding: 24px 16px 22px 16px;
+}
+.container-button-menu {
+  display: flex;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  width: 288px;
+}
+.button-menu {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 header {
   border-bottom: 1px solid #e7e9fc;
 }
-.page-nav {
-  display: flex;
-  align-items: center;
-}
+
 .menu {
-  display: flex;
-  align-items: center;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
+}
+.address-phone-mail {
+  display: none;
 }
 .logo,
 .logo-studio {
@@ -79,9 +89,7 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.logo {
-  margin-right: 76px;
-}
+
 .link {
   text-decoration: none;
 }
@@ -95,84 +103,107 @@ header {
 .logo-web {
   color: var(--color-button-iris);
 }
-.active:visited {
-  display: block;
-  color: var(--color-button-ocean);
-}
-.active-portfolio:visited {
-  display: block;
-  color: var(--color-button-ocean);
-}
-
-.active::after {
-  position: absolute;
-  content: '';
-  width: 48px;
-  height: 4px;
-  background: #404bbf;
-  border-radius: 2px;
-  display: block;
-  margin-top: 20px;
-}
-
-.active-portfolio::after {
-  position: absolute;
-  content: '';
-  width: 66px;
-  height: 4px;
-  background: #404bbf;
-  border-radius: 2px;
-  display: block;
-  margin-top: 20px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .list {
   list-style: none;
 }
-.link-header {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+/*!(((((((( mobile menu ))))))))))*/
+.mob-menu {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  padding: 24px 24px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mob-menu.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.mob-close-btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 32px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border-color: rgba(46, 47, 66, 0.1);
+  border-style: solid;
+  border-width: 1px;
+  background: #e7e9fc;
+  fill: var(--primary-text-color-blue);
+}
+.mob-close-icon {
+  display: block;
+  margin: auto;
+}
+
+.mob-link-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
   letter-spacing: 0.02em;
-  text-decoration: none;
+  text-transform: capitalize;
+  color: #2e2f42;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   color: var(--primary-text-color-blue, #2e2f42);
 }
-.link-header:hover,
-.link-header:focus {
+.mob-link-header:focus {
   color: var(--color-button-ocean, #404bbf);
 }
-.menu:not(:last-child) {
-  margin-right: 40px;
+
+.menu-link:not(:last-child) {
+  margin-bottom: 40px;
 }
-.address-list {
-  display: flex;
-  gap: 40px;
-}
-.address {
+.phone-link {
+  font-style: normal;
+  display: block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+  margin-bottom: 40px;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.address,
-.address-phone-mail {
-  text-decoration: none;
+.address-link {
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--color-text-slate);
+  color: #434455;
+  margin-bottom: 48px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.address:focus,
-.address:hover {
+.address-link:focus,
+.phone-link:focus {
   color: var(--color-button-ocean);
 }
+
+.active:visited {
+  display: block;
+  color: var(--color-button-ocean);
+}
+.mobile-list {
+  display: flex;
+  align-items: start;
+  gap: 24px;
+}
+
 /*! ======main===== =========================*/
 .hero-section {
   display: flex;
@@ -188,27 +219,38 @@ header {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/Dark-bgmob-1x-min.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   min-width: 320px;
   /* max-width: 1440px; */
-  margin-right: auto;
-  margin-left: auto;
+ 
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .background {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bgmob-2x-min.jpg);
+  }
 }
 
-.hero{
+.hero {
   font-weight: 700;
-font-size: 36px;
-line-height: 1.1;
-text-align: center;
-letter-spacing: 0.02em;
-text-transform: capitalize;
-color: #FFFFFF;
-max-width: 320px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 72px;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #ffffff;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
 }
 
 .button-hero {
@@ -241,7 +283,6 @@ margin-bottom: 72px;
   padding-top: 96px;
   padding-bottom: 96px;
 }
-
 
 .features-list {
   display: flex;
@@ -408,7 +449,6 @@ margin-bottom: 72px;
   background-color: var(--primary-text-color-blue);
   /* display: flex; */
   /* padding: 100px 0; */
- 
 }
 .footer-logo-container {
   display: flex;
@@ -487,11 +527,11 @@ div .social-item {
   max-width: 398px;
   margin-right: auto;
   margin-left: auto;
- text-align: center;
+  text-align: center;
   /* display: flex; */
   /* margin-left: 80px; */
 }
-.subscribe-container{
+.subscribe-container {
   padding-bottom: 96px;
 }
 .subscribe-title {
@@ -504,7 +544,7 @@ div .social-item {
   letter-spacing: 0.02em;
   color: #ffffff;
   padding-bottom: 16px;
-    margin-right: auto;
+  margin-right: auto;
   margin-left: auto;
   margin-top: 72px;
   /* margin-left: 80px; */
