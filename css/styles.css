@@ -191,7 +191,7 @@ header {
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 320px;
+  min-width: 320px;
   /* max-width: 1440px; */
   margin-right: auto;
   margin-left: auto;
@@ -242,16 +242,6 @@ margin-bottom: 72px;
   padding-bottom: 96px;
 }
 
-.container-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f4f4fd;
-  border-radius: 4px;
-  height: 112px;
-  width: 264px;
-  margin-bottom: 8px;
-}
 
 .features-list {
   display: flex;
@@ -490,12 +480,6 @@ div .social-item {
   gap: 16px;
 }
 
-.footer-position {
-
-  /* display: flex; */
-  /* justify-content: start; */
-}
-
 .link-footer:is(:hover, :focus) {
   background-color: #31d0aa;
 }
@@ -713,7 +697,7 @@ a > .focus:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
+  width: 90%;
   height: auto;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -744,7 +728,7 @@ a > .focus:focus {
 }
 
 .container-form-modal {
-  padding: 72px 24px 0;
+  padding: 72px 16px 0;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -769,7 +753,7 @@ a > .focus:focus {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 0;
-  padding-left: 38px;
+  padding-left: 34px;
   outline: transparent;
   transition-property: border, color;
   transition-duration: 250ms;
