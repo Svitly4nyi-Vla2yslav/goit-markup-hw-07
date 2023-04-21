@@ -118,6 +118,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 100;
 }
 .mob-menu.is-hidden {
   opacity: 0;
@@ -606,14 +607,16 @@ div .social-item {
 
 /* //! ============PORTFOLIO =======?// */
 .section-portfolio {
-  padding-bottom: 120px;
-  padding-top: 96px;
+  /* padding-bottom: 120px;
+  padding-top: 96px; */
+  padding: 48px 0px;
 }
 .container-list {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 72px;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap:16px 24px;
+  margin-bottom: 48px;
 }
 .button-list {
   font-family: 'Roboto', sans-serif;
@@ -625,7 +628,7 @@ div .social-item {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  padding: 12px 24px;
+  padding:8px 16px;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   color: var(--color-button-iris);
@@ -694,14 +697,21 @@ div .social-item {
 .about a {
   text-decoration: none;
 }
+.border-about:not(:last-child){
+ margin-bottom: 48px;
+}
 
 .about {
-  display: flex;
+ width: auto;
+  /* display: flex;
   flex-wrap: wrap;
-  gap: 48px 24px;
+  gap: 48px 24px; */
+  margin-right: auto;
+  margin-left: auto;
 }
 .card-text {
   padding: 32px 16px;
+  border-top: none;
   border-right: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
