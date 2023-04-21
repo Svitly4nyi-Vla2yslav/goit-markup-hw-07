@@ -697,7 +697,7 @@ div .social-item {
 .about a {
   text-decoration: none;
 }
-.border-about:not(:last-child){
+.border-about{
  margin-bottom: 48px;
 }
 
