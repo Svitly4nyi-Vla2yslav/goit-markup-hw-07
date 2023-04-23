@@ -302,9 +302,11 @@ header {
 }
 .features-title {
   text-align: center;
+  font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
+  letter-spacing: 0.02em;
   /* font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -313,6 +315,7 @@ header {
 }
 .features-text {
   /* font-weight: 400; */
+  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -450,6 +453,8 @@ header {
   background-color: var(--primary-text-color-blue);
   /* display: flex; */
   /* padding: 100px 0; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .footer-logo-container {
   display: flex;
@@ -457,7 +462,7 @@ header {
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 96px;
+
 }
 .logo-footer {
   margin-right: auto;
@@ -503,7 +508,7 @@ header {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -532,9 +537,7 @@ div .social-item {
   /* display: flex; */
   /* margin-left: 80px; */
 }
-.subscribe-container {
-  padding-bottom: 96px;
-}
+
 .subscribe-title {
   display: flex;
   justify-content: center;
@@ -544,10 +547,10 @@ div .social-item {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
-  padding-bottom: 16px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 72px;
+  margin-bottom: 16px;
   /* margin-left: 80px; */
 }
 .subscribe-email {
@@ -778,9 +781,11 @@ a > .focus:focus {
 }
 
 .container-form-modal {
-  padding: 72px 16px 0;
+  padding-top: 72px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 24px;
   margin-bottom: 0;
-  padding-bottom: 0;
 }
 .user-info {
   margin-top: 16px;
@@ -844,6 +849,9 @@ a > .focus:focus {
   padding-top: 8px;
   padding-bottom: 4px;
 }
+.text-policy{
+  letter-spacing: 0.04em;
+}
 
 .modal-textarea::placeholder {
   font-style: normal;
@@ -886,7 +894,7 @@ a > .focus:focus {
   padding: 0;
 }
 .modal-button-send {
-  margin: 24px 0;
+  margin-top: 24px;
   display: flex;
   justify-content: center;
 }
